@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i鹰の相亲面试题</title>
+    <link rel="shortcut icon" href="./img/favicon.svg">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+
+    <div class="cover" id="body-cover" draggable="false">
+        <img src="./img/cover.png" alt="cover-img" class="cover-img" draggable="false">
+    </div>
+    <script>
+        $(".cover").dblclick(function () {
+            $('.cover').css('opacity', '0');
+            setInterval(function () {
+                $('.cover').css('display', 'none');
+            }, 1000)
+        });
+    </script>
+
+    <div class="watermark">
+        <img src="./img/watermark.svg" draggable="false">
+    </div>
+
+    <div class="content">
+        <div class="live-room">
+            <a href="https://live.bilibili.com/23141761" target="_blank" rel="noopener">
+                <img src="./img/bili.png" alt="bili-home" class="live-room-inner"
+                    title="您的相亲对象拥有：围棋职业二段运动员、女子围甲2-16荣誉保持者、山西队韩语翻译、智运会混双五连胜选手、卑鄙的熬老太太战术创始者、虚空舰队舰长、围棋界贾玲、生化围棋创始人、波力海苔吞噬者、鱼肉肠弓箭手、围棋界高坚果、美团外卖业余骑手、直播界毕加索、鳄鱼夹魔王、恐龙围棋创始者、萌肚火箭宇航员、虎扑八冠王、虎扑女神、B站直播区黑马等头衔，即刻上舰拥有优先面试权。">
+            </a>
+        </div>
+        <div class="title">
+            <div>i&nbsp;鹰の相亲面试题</div>
+        </div>
+        <div class="welcome" id="welcome" style="display: block;">
+            <div class="msg-box" id="msg-box">
+                <div class="msg-author">
+                    <span class="msg-author">出题人：
+                        <a href="https://space.bilibili.com/632749561" target="_blank" rel="noopener">可一可再不可</a>
+                    </span>&nbsp;
+                    <span lass="msg-censor">审题人：
+                        <a href="https://space.bilibili.com/632749561" target="_blank" rel="noopener">可一可再不可</a>
+                    </span>&nbsp;
+                    <span class="msg-date">出题日期：2024年1月</span>
+                </div>
+                <div class="ref-box">
+                    <div class="test"></div>
+                    <div class="msg-ref">
+                        <br>
+                        <p>提要：本卷用于相亲时闭卷面谈或笔谈，适用于高度鹰瘾者，以及希望寻求具有类似爱好、价值观念和品质的伴侣之人，希望各位找到合适的终身伴侣。</p><br>
+                    </div>
+                    <div class="msg-grade">
+                        <p><b>本卷满分100分，附加分10分。</b></p>
+                        <p>大致意见: 0~5分为不了解者，6~15分为略有所闻者，16~30分为略感兴趣者，31~50分为较感兴趣者，51~70分为合格
+                            i鹰，71~85分为优秀
+                            i鹰，86~90分为高度鹰瘾者，90~99分为可遇不可求者，100~110分鉴定为没事做天天琢磨战鹰切片并几乎贯彻战鹰近一年的直播、或&nbsp;AI&nbsp;机器人。<b>具体使用时可自行调整分级，命题答案最终解释权归具体面试官所有。</b>
+                        </p>
+                    </div>
+                    <div class="sobad">
+                        <span>调整了原始文档的顺序，记分功能只支持选择题和判断题。<br>可恶，不能以满分的结果来打动鹰酱，看来是鹰瘾尚浅。</span>
+                    </div>
+                </div>
+            </div>
+            <div class="play">
+                <button type="button" class="play-btn">开始答题</button>
+                <div class="btn-img"><img src="./img/profi.png" class="abi"></div>
+            </div>
+
+        </div>
+        <div class="examing" id="examing" style="display: none;">
+            <div class="question-box" id="question-box">
+
+                <div class="timing">
+                    <div class="timinfo">还有5分钟哦~</div>
+                    <time id="timer"></time>
+                    <button id="suspend-time">||</button>
+                </div>
+
+                <div class="question-box-f">
+                    <div class="question-title" id="question-title">标题</div>
+                </div>
+                <div class="question-box-q">
+                    <span class="ques-sum" id="ques-sum">总分：</span>&nbsp;/
+                    <span class="q-score" id="q-score">单项分：</span>
+                    <hr style="margin-right: 5%;">
+                    <div class="question-num" id="question-num" style="margin-top: 5px;">序号：</div>
+                    <div class="ref-link" id="ref-link" style="display: block;">
+                        <!-- <a href="http://blank/" id="areff" class="areff" target="_blank" rel="noopener">相关视频</a> -->
+                        <a href="http://blank/" id="areff" class="areff" target="_blank" rel="noopener">相关视频</a>
+                    </div>
+                    <div class="question-body" id="question-body">
+                        <p>问题内容</p>
+                    </div>
+                    <div class="ans-tip">回答提示</div>
+                    <div class="answer-box" id="answer-body">
+                        <div id="item" class="answer-select" style="display: block;">
+                            <ul id="option" style="list-style-type: none;">
+                                <li>
+                                    <input id="ia" type="radio" name="opt" value="A">
+                                    <i id="A"></i>
+                                </li>
+                                <li><input id="ib" type="radio" name="opt" value="B">
+                                    <i id="B"></i>
+                                </li>
+                                <li><input id="ic" type="radio" name="opt" value="C">
+                                    <i id="C"></i>
+                                </li>
+                                <li><input id="id" type="radio" name="opt" value="D">
+                                    <i id="D"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="ans-fill" style="display: none;">
+                            <input type="text" value="" class="input1 ans-input" style="display: none;">
+                            <input type="text" value="" class="input2 ans-input" style="display: none;">
+                            <input type="text" value="" class="input3 ans-input" style="display: none;">
+                            <button type="button" class="collapsible">参考答案：</button>
+                            <div class="contents">
+                              <span id="answers"></span>
+                            </div> 
+                        </ul>
+                        <textarea id="textarea" name="textarea" class="textarea" maxlength="300"
+                            style="display: block;"></textarea>
+                    </div>
+                </div>
+
+                <div class="question-box-b">
+                    <div class="control-btn">
+                        <button id="prevItem" class="c-btn">上一题</button>
+                        <button id="nextItem" class="c-btn">下一题</button>
+                        <button id="submit" class="c-btn">交卷</button>
+                        <button id="gohomebtn" class="c-btn">返回首页</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer" id="footer" draggable="false">
+            <p style="line-height: 26px;">音乐来源：<a href="https://bideyuanli.com/zhan" target="_blank"
+                    rel="noopener">战鹰唱片集</a><br>搭建：<a href="https://space.bilibili.com/85781870" target="_blank"
+                    rel="noopener">琴酒亡命天涯</a>&nbsp;/&nbsp;参考：<a href="https://www.yuque.com/moqianbei/shuati"
+                    target="_blank" rel="noopener">刷题系统</a><br>动效：<a
+                    href="https://gitee.com/RuanJiaFeng2013">gitee仓库</a></p>
+            <p style="line-height: 50px;opacity: 0.8;">本页仅供娱乐，内容仅供参考。</p>
+        </div>
+    </div>
+
+    <div class="t100" style="display: none;" draggable="false" id="t100">
+        <img src="./img/t100.jpg" class="ti">
+    </div>
+
+    <div class="t300" style="display: none;" draggable="false" id="t300">
+        <img src="./img/t300.png" class="ti">
+    </div>
+
+    <div class="s15" style="display: none;" draggable="false" id="s15">
+        <img src="./img/s10.png" class="ti">
+    </div>
+
+    <div class="s30" style="display: none;" draggable="false" id="s30">
+        <img src="./img/s30.png" class="ti">
+    </div>
+
+    <div class="black" id="blackCover">
+        <img src="./img/clip.gif" class="black-img" draggable="false">
+    </div>
+
+    <div class="goOn">
+        <p style="text-align: center;font-size:30px;margin-top:5%;">已暂停</p>
+        <p style="text-align: center;font-size:20px;margin-top:8%;">点击按钮继续答题↓</p>
+        <button class="goonbtn">继续</button>
+    </div>
+
+    <div class="music">
+        <audio controls>
+            <source src="./mp3/scattered_stones_and_fragments.mp3" />
+        </audio>
+    </div>
+
+    <script>
+        window.onload = function () {
+            document.querySelector('audio').volume = 0.2;
+        }
+    </script>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/question.js"></script>
+
+</body>
+
+</html>
